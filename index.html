@@ -1,14 +1,14 @@
-<!doctype html>
+---
+layout: default
+title: Mahesh R
+---
 
-<html>
-<head>
-	<title> Mahesh R </title>
-	<link rel="stylesheet" href="main.css">
+<div id="home">
+  <h1>Blog Posts</h1>
+  <ul class="posts">
+    {% for post in site.posts %}
+      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+    {% endfor %}
+  </ul>
 
-</head>
-
-<body>
-	<h1> Comming soon .... </h1>
-	<p> Thank you for visiting my site ! </p>
-</body>
-</html>
+</div>
